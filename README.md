@@ -1,6 +1,6 @@
 # **JUAN I. MASCARENHAS PORFOLIO**
 
-![Porfolio](/jim-porfolio//src/assets/portada-porfolio.png)
+![Porfolio](/jim-porfolio/src/assets/portada-porfolio.png)
 
 Hi everyone! Welcome to my **Portfolio**, built with React (Javascript), along with other libraries and tools such as:
 
