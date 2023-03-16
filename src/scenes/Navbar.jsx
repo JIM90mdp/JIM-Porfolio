@@ -82,13 +82,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     </nav>
   ) : (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
-      <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold text-green">JIM</h4>
+      <div className="flex items-center justify-between w-5/6">
+        <h4 className="font-playfair text-3xl font-bold text-green3 pl-[40px]">JIM</h4>
         <button
-          className="rounded-full bg-red p-2"
+          className="rounded-full bg-red position: relative right-[-20px]"
           onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
-          <BsList />
+          <BsList className="h-[33px] w-[33px] text-green3"/>
         </button>
         {!isDesktop && isMenuToggled && (
           <div className="fixed right-0 bottom-0 h-full bg-opaque-black w-[100px] text-green">

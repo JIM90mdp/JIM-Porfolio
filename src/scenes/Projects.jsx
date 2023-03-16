@@ -25,7 +25,7 @@ const Project = ({ title }) => {
       <img
         src={require(`../assets/${projectTitle}.png`)}
         alt={projectTitle}
-        className="max-h-[250px] max-w-[490px] border-2 m-5"
+        className="border-2"
       />
     </motion.div>
   );
@@ -177,7 +177,7 @@ const Projects = () => {
       </div>
     </section>
   ) : (
-    <section id="projects" className="pt-48 pb-48 ">
+    <section id="projects" className="pt-20 pb-20 ">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -210,28 +210,23 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
-          <div className=" m-5 flex text-center justify-center items-center flex-col p-5 text-lg font-playfair">
+          <a
+            href="https://jim-countries-vbeb.vercel.app/"
+            rel="noreferrer"
+            target="_blank"
+            referencepolicy="no-referrer-when-downgrade"
+          >
             <Project title="JIM Countries" />
-            <p className="font-playfair font-semibold text-4xl">
+          </a>
+          <div className="flex text-center justify-center items-center flex-col text-lg font-playfair">
+            <p className="font-playfair font-semibold text-xl">
               <span className="text-green3">JIM'S COUNTRIES </span>WEB SITE
             </p>
             <div
               className=" p-5 flex text-center items-center flex-row 
-              w-auto h-auto text-lg font-playfair"
+              w-auto h-auto text-base font-playfair"
             >
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
-                SITE:
-              </p>
-              <a
-                className="p-7"
-                href="https://jim-countries-vbeb.vercel.app/"
-                rel="noreferrer"
-                target="_blank"
-                referencepolicy="no-referrer-when-downgrade"
-              >
-                JIM's Countries
-              </a>
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
+              <p className="p-3 text-base font-playfair font-semibold text-green3">
                 GITHUB:
               </p>
               <GitHubSVG href="https://github.com/JIM90mdp/JIM-Countries" />
@@ -266,40 +261,32 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className=" m-5 flex text-center justify-center items-center flex-col p-5  text-lg font-playfair ">
+          <a
+            href="https://pg-front-henry.vercel.app/"
+            rel="noreferrer"
+            target="_blank"
+            referencepolicy="no-referrer-when-downgrade"
+          >
             <Project title="Groove Tickets" />
-            <p className="font-playfair font-semibold text-4xl">
+          </a>
+          <div className="flex text-center justify-center items-center flex-col text-lg font-playfair ">
+            <p className="font-playfair font-semibold text-xl">
               <span className="text-green3">GROOVE TICKETS </span>WEB SITE
             </p>
 
-            <div
-              className=" p-5 flex text-center items-center flex-row 
-              w-auto h-auto text-lg font-playfair"
-            >
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
-                SITE:
-              </p>
-              <a
-                className="p-7"
-                href="https://pg-front-henry.vercel.app/"
-                rel="noreferrer"
-                target="_blank"
-                referencepolicy="no-referrer-when-downgrade"
-              >
-                Groove Tickets
-              </a>
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
+            <div className="flex text-center items-center flex-row w-[80%] h-auto font-playfair">
+              <p className="p-3 text-base font-playfair font-semibold text-green3">
                 GITHUB (Front):
               </p>
               <GitHubSVG href="https://github.com/JIM90mdp/PG-Henry" />
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
+              <p className="p-3 text-base font-playfair font-semibold text-green3">
                 GITHUB (Back):
               </p>
               <GitHubSVG href="https://github.com/JIM90mdp/pg-henry-back" />
             </div>
 
             <div className="flex justify-center items-center flex-col  m-5">
-              <p >
+              <p>
                 Website created as a group project of SoyHenry's Full-Stack Web
                 Development bootcamp.{" "}
               </p>

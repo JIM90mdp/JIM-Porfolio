@@ -440,7 +440,7 @@ const MySkills = () => {
       </div>
     </section>
   ) : (
-    <section id="skills" className="pt-10 pb-24">
+    <section id="skills" className="pb-10">
       {/* HEADER  */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div

@@ -17,10 +17,10 @@ function App() {
   const isDesktop = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
-    console.log("Entra al useEffect del App")
+    console.log("Entra al useEffect del App");
     const handleScroll = () => {
       if (window.scrollY === 0) {
-        console.log("window.scrollY: ",window.scrollY )
+        console.log("window.scrollY: ", window.scrollY);
         setIsTopOfPage(true);
         setSelectedPage("home");
       }
@@ -46,7 +46,9 @@ function App() {
           <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
-      <LineGradient />
+      <div className="flex justify-center m-7">
+        <LineGradient width="w-[90%]" />
+      </div>
       <div className="w-5/6 mx-auto md:h-full ">
         <motion.div
           margin="0 0 -200px 0"
@@ -56,7 +58,9 @@ function App() {
           <MySkills />
         </motion.div>
       </div>
-      <LineGradient />
+      <div className="flex justify-center m-7">
+        <LineGradient width="w-[90%]" />
+      </div>
       <div className="w-5/6 mx-auto">
         <motion.div
           margin="0 0 -200px 0"
@@ -66,7 +70,9 @@ function App() {
           <Projects />
         </motion.div>
       </div>
-      <LineGradient />
+      <div className="flex justify-center m-7">
+        <LineGradient width="w-[90%]" />
+      </div>
       {/* <div className="w-5/6 mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"
@@ -76,7 +82,9 @@ function App() {
           <Testimonials />
         </motion.div>
       </div>
-      <LineGradient /> */}
+              <div className="flex justify-center m-7">
+          <LineGradient width="w-[90%]" />
+        </div> */}
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"
@@ -85,9 +93,10 @@ function App() {
         >
           <Contact />
         </motion.div>
-        
       </div>
-      <LineGradient />
+      <div className="flex justify-center m-7">
+        <LineGradient width="w-[90%]" />
+      </div>
       <Footer />
     </div>
   );
