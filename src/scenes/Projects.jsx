@@ -2,6 +2,7 @@ import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import GitHubSVG from "../assets/GitHubSVG";
+import GlassEffect from "../components/GlassEffect/GlassEffect";
 
 const container = {
   hidden: {},
@@ -37,6 +38,7 @@ const Projects = () => {
   return isAboveLarge ? (
     <section id="projects" className="pt-48 pb-48 ">
       {/* HEADINGS */}
+      
       <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
@@ -69,7 +71,8 @@ const Projects = () => {
         >
           {/* ROW 1 */}
           <div className=" m-5 flex text-center items-center flex-col p-5 text-lg font-playfair">
-            <Project title="JIM Countries" />
+            <GlassEffect title="jim countries"/>
+            
             <p className="font-playfair font-semibold text-4xl">
               <span className="text-green3">JIM'S COUNTRIES </span>WEB SITE
             </p>
@@ -126,7 +129,8 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className=" m-5 flex text-center items-center flex-col p-5 text-lg font-playfair ">
-            <Project title="Groove Tickets" />
+            {/* <Project title="Groove Tickets" /> */}
+            <GlassEffect title="Groove Tickets"/>
             <p className="font-playfair font-semibold text-4xl">
               <span className="text-green3">GROOVE TICKETS </span>WEB SITE
             </p>
@@ -254,6 +258,7 @@ const Projects = () => {
         <div className="flex justify-center m-7">
           <LineGradient width="w-2/3" />
         </div>
+        
         <motion.div
           className="flex items-center flex-col"
           variants={container}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import BurgerX from "../components/Burger/BurgerX";
 
 import {
   BsFillBriefcaseFill,
@@ -39,6 +40,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const navbarBackground = isTopOfPage ? "" : "bg-opaque-black";
+  const hiddenMenu = isMenuToggled ? "hidden" : "";
 
   console.log("isDesktop", isDesktop);
 
@@ -46,7 +48,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     <nav
       className={`${navbarBackground} flex flex-col z-40 w-[auto] fixed top-[205px] left-7 `}
     >
-      <div className="flex items-center justify-between mx-auto w-5/6 flex flex-col left-7 ">
+      <div className="items-center justify-between mx-auto w-5/6 flex flex-col left-7 ">
         {/* <h4 className="font-playfair text-3xl font-bold text-green">JIM</h4> */}
         <p className="text-4xl font-playfair z-10 text-center py-3">
           J I{" "}
@@ -83,44 +85,46 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   ) : (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between w-5/6">
-        <h4 className="font-playfair text-3xl font-bold text-green3 pl-[40px]">JIM</h4>
+        <h4 className="font-playfair text-3xl font-bold text-green3 pl-[40px]">
+          JIM
+        </h4>
         <button
-          className="rounded-full bg-red position: relative right-[-20px]"
+          className={`${hiddenMenu} rounded-full bg-red position: relative right-[-20px] `}
           onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
-          <BsList className="h-[33px] w-[33px] text-green3"/>
+          <BsList className="h-[33px] w-[33px] text-green3" />
         </button>
         {!isDesktop && isMenuToggled && (
           <div className="fixed right-0 bottom-0 h-full bg-opaque-black w-[100px] text-green">
             {/* CLOSE ICON */}
-            <div className="relative flex justify-end p-12 text-xl text-semibold top-[-20px]">
+            <div className="relative flex justify-end p-[44px] text-xl text-semibold top-[-20px]">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                X
+                <BsList className="text-green3"/>
               </button>
             </div>
 
             {/* MENU ITEMS */}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue hover:text-green3">
-            <Link
-            page="Home"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-          <Link
-            page="Skills"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-          <Link
-            page="Projects"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-          <Link
-            page="Contact"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
+            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-green3 hover:text-green3">
+              <Link
+                page="Home"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Skills"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Projects"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Contact"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
             </div>
           </div>
         )}
