@@ -36,10 +36,9 @@ const MySkills = () => {
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32 text-xl">
-        {/* EXPERIENCE */}
+      <div className="grid grid-cols-2 mt-16 text-xl">
         <motion.div
-          className="md:w-1/2 mt-10"
+          className="mt-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -49,13 +48,13 @@ const MySkills = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="relative m-5">
+          <div className="flex flex-col items-center m-5">
             <div className="z-10">
               <p className="font-playfair font-semibold text-4xl m-5">
                 Technologies
               </p>
             </div>
-            <div className="font-playfair text-lg m-5 flex flex-wrap w-4/5">
+            <div className="flex flex-wrap justify-center items-center font-playfair text-lg m-5 ">
               {" "}
               <a
                 href="https://www.w3.org/html/"
@@ -283,7 +282,7 @@ const MySkills = () => {
                 />{" "}
                 <p className="m-[1px]">Sass</p>
               </a>{" "}
-              <div className="m-[3px] h-[40px] w-[40px]">
+              {/* <div className="m-[3px] h-[40px] w-[40px]">
                 <svg
                   viewBox="0 0 600 476.30000000000007"
                   xmlns="http://www.w3.org/2000/svg"
@@ -306,7 +305,7 @@ const MySkills = () => {
                   />
                 </svg>
                 <p className="m-[1px]">MUI</p>
-              </div>
+              </div> */}
               <a
                 href="https://materializecss.com/"
                 target="_blank"
@@ -387,56 +386,32 @@ const MySkills = () => {
           </div>
         </motion.div>
 
-        {/* INNOVATIVE */}
         <motion.div
-          className="md:w-1/2 mt-10"
+          className="mt-10 text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="relative m-5">
+          <div className="flex flex-col items-center m-5">
             <div className="z-10">
               <p className="font-playfair font-semibold text-4xl m-5">
                 Soft Skills
               </p>
             </div>
-          </div>
-          <p className="">
-            Communication - Problem-solving - Time management - Teamwork -
-            Adaptability - Organizational - Critical thinking - Leadership -
-            Patience - Creativity
-          </p>
-        </motion.div>
-        {/* IMAGINATIVE */}
-        {/* <motion.div
-          className="md:w-1/3 mt-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-playfair font-semibold text-4xl">Others</p>
+            <div className="flex flex-wrap justify-center items-center font-playfair text-lg m-5">
+              <p>
+                Communication - Problem-solving - Time management - Teamwork -
+                Adaptability - Organizational - Critical thinking - Leadership -
+                Patience - Creativity
+              </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            Accumsan eu fringilla nisi, eget. Vitae, eget ut id proin arcu in
-            curabitur. Lectus libero, egestas enim aliquam quis felis amet.
-            Sagittis, amet netus fringilla netus lobortis odio sed platea.
-            Bibendum.
-          </p>
-        </motion.div> */}
+        </motion.div>
       </div>
     </section>
   ) : (
@@ -717,7 +692,7 @@ const MySkills = () => {
                 />{" "}
                 <p className="m-[1px]">Sass</p>
               </a>{" "}
-              <div className="m-[3px] t-[-10px]h-[40px] w-[40px]">
+              {/* <div className="m-[3px] t-[-10px]h-[40px] w-[40px]">
                 <svg
                   viewBox="0 0 600 476.30000000000007"
                   xmlns="http://www.w3.org/2000/svg"
@@ -740,7 +715,7 @@ const MySkills = () => {
                   />
                 </svg>
                 <p className="m-[1px]">MUI</p>
-              </div>
+              </div> */}
               <a
                 href="https://materializecss.com/"
                 target="_blank"

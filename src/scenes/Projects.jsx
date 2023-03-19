@@ -36,9 +36,9 @@ const Projects = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   return isAboveLarge ? (
+
     <section id="projects" className="pt-48 pb-48 ">
-      {/* HEADINGS */}
-      
+
       <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
@@ -52,16 +52,20 @@ const Projects = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
+
             <span className="text-green3">PROJECTS</span>
+
           </p>
           <div className="flex justify-center m-7">
+
             <LineGradient width="w-2/3" />
+
           </div>
         </div>
       </motion.div>
 
       {/* PROJECTS */}
-      <div className="flex justify-center flex-row">
+      <div className="grid grid-cols-2 ">
         <motion.div
           className="flex items-center flex-col"
           variants={container}
@@ -71,34 +75,35 @@ const Projects = () => {
         >
           {/* ROW 1 */}
           <div className=" m-5 flex text-center items-center flex-col p-5 text-lg font-playfair">
-            <GlassEffect title="jim countries"/>
-            
-            <p className="font-playfair font-semibold text-4xl">
+            <a
+              href="https://jim-countries-vbeb.vercel.app/"
+              rel="noreferrer"
+              target="_blank"
+              referencepolicy="no-referrer-when-downgrade"
+            >
+
+              <GlassEffect title="JIM Countries" />
+
+            </a>
+            <p className="font-playfair font-semibold text-4xl mt-5">
+
               <span className="text-green3">JIM'S COUNTRIES </span>WEB SITE
+              
             </p>
             <div
               className=" p-5 flex text-center items-center flex-row 
               w-auto h-auto text-lg font-playfair"
             >
               <p className="p-3 text-xl font-playfair font-semibold text-green3">
-                SITE:
-              </p>
-              <a
-                className="p-7"
-                href="https://jim-countries-vbeb.vercel.app/"
-                rel="noreferrer"
-                target="_blank"
-                referencepolicy="no-referrer-when-downgrade"
-              >
-                JIM's Countries
-              </a>
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
                 GITHUB:
               </p>
+
               <GitHubSVG href="https://github.com/JIM90mdp/JIM-Countries" />
+
             </div>
 
             <div classname="flex justify-center items-center flex-col text-2xl ">
+
               <p>
                 Website created as an individual project of SoyHenry's
                 Full-Stack Web Development bootcamp.{" "}
@@ -109,18 +114,18 @@ const Projects = () => {
                 information about all countries in the world and create
                 activities, making the tourist trip planning easier.
               </p>
+
               <br />
+
               <p>
                 The information is provided by RESTful Application Program
                 Interface restcountries.com
               </p>
+
             </div>
           </div>
         </motion.div>
 
-        <div className="flex justify-center m-7">
-          <LineGradient width="w-2/3" />
-        </div>
         <motion.div
           className="flex items-center flex-col"
           variants={container}
@@ -130,35 +135,39 @@ const Projects = () => {
         >
           <div className=" m-5 flex text-center items-center flex-col p-5 text-lg font-playfair ">
             {/* <Project title="Groove Tickets" /> */}
-            <GlassEffect title="Groove Tickets"/>
-            <p className="font-playfair font-semibold text-4xl">
+            <a
+            href="https://pg-front-henry.vercel.app/"
+            rel="noreferrer"
+            target="_blank"
+            referencepolicy="no-referrer-when-downgrade"
+          >
+
+            <GlassEffect title="Groove Tickets" />
+
+          </a>
+            <p className="font-playfair font-semibold text-4xl mt-5">
+
               <span className="text-green3">GROOVE TICKETS </span>WEB SITE
+
             </p>
 
             <div
               className=" p-5 flex text-center items-center flex-row 
               w-auto h-auto text-lg font-playfair"
             >
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
-                SITE:
-              </p>
-              <a
-                className="p-7"
-                href="https://pg-front-henry.vercel.app/"
-                rel="noreferrer"
-                target="_blank"
-                referencepolicy="no-referrer-when-downgrade"
-              >
-                Groove Tickets
-              </a>
+
               <p className="p-3 text-xl font-playfair font-semibold text-green3">
                 GITHUB (Front):
               </p>
+
               <GitHubSVG href="https://github.com/JIM90mdp/PG-Henry" />
+
               <p className="p-3 text-xl font-playfair font-semibold text-green3">
                 GITHUB (Back):
               </p>
+
               <GitHubSVG href="https://github.com/JIM90mdp/pg-henry-back" />
+
             </div>
 
             <div classname="flex justify-center items-center flex-col text-2xl">
@@ -175,9 +184,6 @@ const Projects = () => {
             </div>
           </div>
         </motion.div>
-        <div className="flex justify-center m-7">
-          <LineGradient width="w-2/3" />
-        </div>
       </div>
     </section>
   ) : (
@@ -258,7 +264,7 @@ const Projects = () => {
         <div className="flex justify-center m-7">
           <LineGradient width="w-2/3" />
         </div>
-        
+
         <motion.div
           className="flex items-center flex-col"
           variants={container}
