@@ -136,7 +136,7 @@ const Projects = () => {
           <div className=" m-5 flex text-center items-center flex-col p-5 text-lg font-playfair ">
             {/* <Project title="Groove Tickets" /> */}
             <a
-            href="https://pg-front-henry.vercel.app/"
+            href="https://groove-tickets.vercel.app/"
             rel="noreferrer"
             target="_blank"
             referencepolicy="no-referrer-when-downgrade"
