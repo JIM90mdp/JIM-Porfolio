@@ -11,26 +11,10 @@ const Landing = ({ setSelectedPage }) => {
       id="home"
       className="flex-row md:justify-between md:items-center gap-1 md:h-auto pt-48 pb-48"
     >
-      {/* IMAGE SECTION */}
-      {/* <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
-        {isAboveLarge ? (
-          <div
-            className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
-            before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full  before:z-[-1]"
-          ></div>
-        ) : (
-          <img
-            alt="profile"
-            className="z-10 w-full max-w-[400px] md:max-w-[600px]"
-            src="assets/profile-image.png"
-          />
-        )}
-      </div> */}
-
       <div className="z-30 basis-2/5 mt-5 md:mt-15 flex flex-row items-center justify-center	 ">
         <img
           alt="profile"
-          className="saturate-200  z-10 w-full max-w-[300px] md:max-w-[500px]"
+          className="relative top-[-100px] saturate-200 z-10 w-full max-w-[500px]"
           src={require("../assets/profile-image.png")}
         />
         <div className="flex flex-col items-center justify-center ">
@@ -55,14 +39,9 @@ const Landing = ({ setSelectedPage }) => {
             </p>
 
             <p className="mt-10 mb-7 text-2xl text-center md:text-row ">
-              Music Jazz Professor and Front End Web Developer with extensive
-              teamwork experience. <br />
-              My purpose is to enjoy and value the process while finding
-              motivation through every accomplished goal. <br />
-              I’m defined by the passion for what I do, the perseverance and
-              dedication to overcome difficult situations, the commitment to
-              continue learning, the enjoyment of team working and the drive for
-              constant self-improvement.
+              Front End Web Developer with extensive teamwork experience. <br />
+              I define myself by my passion for what I do, my perseverance, my commitment to continue learning, and my desire for a collaborative environment. <br />
+              I aim to appreciate and value the process while finding motivation through every accomplished goal. <br /> 
             </p>
           </motion.div>
 

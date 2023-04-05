@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-green">
+    <div className="app">
 
       <Navbar
         isTopOfPage={isTopOfPage}

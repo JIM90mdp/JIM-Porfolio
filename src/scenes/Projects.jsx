@@ -36,9 +36,7 @@ const Projects = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   return isAboveLarge ? (
-
     <section id="projects" className="pt-48 pb-48 ">
-
       <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
@@ -52,20 +50,17 @@ const Projects = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-
             <span className="text-green3">PROJECTS</span>
-
           </p>
           <div className="flex justify-center m-7">
-
             <LineGradient width="w-2/3" />
-
           </div>
         </div>
       </motion.div>
 
       {/* PROJECTS */}
-      <div className="grid grid-cols-2 ">
+      <div className="flex flex-col">
+        {/* PROJECT 1 */}
         <motion.div
           className="flex items-center flex-col"
           variants={container}
@@ -73,59 +68,57 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* ROW 1 */}
-          <div className=" m-5 flex text-center items-center flex-col p-5 text-lg font-playfair">
-            <a
-              href="https://jim-countries-vbeb.vercel.app/"
-              rel="noreferrer"
-              target="_blank"
-              referencepolicy="no-referrer-when-downgrade"
-            >
-
-              <GlassEffect title="JIM Countries" />
-
-            </a>
-            <p className="font-playfair font-semibold text-4xl mt-5">
-
-              <span className="text-green3">JIM'S COUNTRIES </span>WEB SITE
-              
-            </p>
-            <div
-              className=" p-5 flex text-center items-center flex-row 
-              w-auto h-auto text-lg font-playfair"
-            >
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
-                GITHUB:
-              </p>
-
-              <GitHubSVG href="https://github.com/JIM90mdp/JIM-Countries" />
-
+          {/* PROJECT 1 */}
+          <div className=" grid grid-cols-2 m-5 text-center items-center p-5 text-xl font-playfair">
+            {/* IMG */}
+            <div className="relative right-[-10%] max-w-[600px]">
+              <a
+                href="https://jim-countries-vbeb.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+                referencepolicy="no-referrer-when-downgrade"
+              >
+                <GlassEffect title="JIM Countries" />
+              </a>
             </div>
 
-            <div classname="flex justify-center items-center flex-col text-2xl ">
-
-              <p>
-                Website created as an individual project of SoyHenry's
-                Full-Stack Web Development bootcamp.{" "}
+            {/* DATA */}
+            <div className="">
+              {/* NAME */}
+              <p className="font-playfair font-semibold mt-5">
+                <span className="text-green3">JIM'S COUNTRIES </span>WEB SITE
               </p>
-              <br />
-              <p>
-                The purpose of J.I.M+'s Countries website is to provide
-                information about all countries in the world and create
-                activities, making the tourist trip planning easier.
-              </p>
+              {/* TEXT */}
+              <div classname="flex justify-center items-center flex-col text-xl ">
+                <p>
+                  Website created as an individual project of SoyHenry's
+                  Full-Stack Web Development bootcamp.{" "}
+                </p>
+                <p>
+                  The purpose of J.I.M+'s Countries website is to provide
+                  information about all countries in the world and create
+                  activities, making the tourist trip planning easier.
+                </p>
+                <p>
+                  The information is provided by RESTful Application Program
+                  Interface restcountries.com
+                </p>
+                {/* GH */}
+                <div className=" p-5 flex flex-row justify-center">
+                  <p className="p-3 text-xl font-playfair font-semibold text-green3">
+                    GITHUB:
+                  </p>
 
-              <br />
-
-              <p>
-                The information is provided by RESTful Application Program
-                Interface restcountries.com
-              </p>
-
+                  <GitHubSVG href="https://github.com/JIM90mdp/JIM-Countries" />
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
-
+        <div className="flex justify-center m-7">
+          <LineGradient width="w-1/6" />
+        </div>
+        {/* PROJECT 2 */}
         <motion.div
           className="flex items-center flex-col"
           variants={container}
@@ -133,57 +126,58 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className=" m-5 flex text-center items-center flex-col p-5 text-lg font-playfair ">
-            {/* <Project title="Groove Tickets" /> */}
-            <a
-            href="https://groove-tickets.vercel.app/"
-            rel="noreferrer"
-            target="_blank"
-            referencepolicy="no-referrer-when-downgrade"
-          >
-
-            <GlassEffect title="Groove Tickets" />
-
-          </a>
-            <p className="font-playfair font-semibold text-4xl mt-5">
-
-              <span className="text-green3">GROOVE TICKETS </span>WEB SITE
-
-            </p>
-
-            <div
-              className=" p-5 flex text-center items-center flex-row 
-              w-auto h-auto text-lg font-playfair"
-            >
-
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
-                GITHUB (Front):
+          <div className=" grid grid-cols-2 m-5 text-center items-center p-5 text-xl font-playfair ">
+            {/* DATA */}
+            <div>
+              {/* NAME */}
+              <p className="font-playfair font-semibold mt-5">
+                <span className="text-green3">GROOVE TICKETS </span>WEB SITE
               </p>
+              {/* text */}
+              <div classname="flex justify-center items-center flex-col text-xl ">
+                <p>
+                  Website created as a group project of SoyHenry's Full-Stack
+                  Web Development bootcamp.{" "}
+                </p>
+                <br />
+                <p>
+                  The purpose of the Groove Tickets website is to facilitate the
+                  acquisition of tickets for concerts and other live music shows
+                  and to provide detailed information about the events.
+                </p>
+                {/* GH */}
+                <div className=" p-5 flex flex-row justify-center">
+                  <p className="p-3 text-xl font-playfair font-semibold text-green3">
+                    GITHUB (Front):
+                  </p>
 
-              <GitHubSVG href="https://github.com/JIM90mdp/PG-Henry" />
+                  <GitHubSVG href="https://github.com/JIM90mdp/Groove-Tickets-Front" />
 
-              <p className="p-3 text-xl font-playfair font-semibold text-green3">
-                GITHUB (Back):
-              </p>
+                  <p className="p-3 text-xl font-playfair font-semibold text-green3">
+                    GITHUB (Back):
+                  </p>
 
-              <GitHubSVG href="https://github.com/JIM90mdp/pg-henry-back" />
-
+                  <GitHubSVG href="https://github.com/JIM90mdp/Groove-TIckets-Back" />
+                </div>
+              </div>
             </div>
+            {/* IMG */}
 
-            <div classname="flex justify-center items-center flex-col text-2xl">
-              <p>
-                Website created as a group project of SoyHenry's Full-Stack Web
-                Development bootcamp.{" "}
-              </p>
-              <br />
-              <p>
-                The purpose of the Groove Tickets website is to facilitate the
-                acquisition of tickets for concerts and other live music shows
-                and to provide detailed information about the events.
-              </p>
+            <div className="max-w-[600px] relative right-[-10%]">
+              <a
+                href="https://groove-tickets.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+                referencepolicy="no-referrer-when-downgrade"
+              >
+                <GlassEffect title="Groove Tickets" />
+              </a>
             </div>
           </div>
         </motion.div>
+        <div className="flex justify-center m-7">
+          <LineGradient width="w-1/6" />
+        </div>
       </div>
     </section>
   ) : (
