@@ -9,9 +9,10 @@ const Landing = ({ setSelectedPage }) => {
   return isAboveLarge ? (
     <section
       id="home"
-      className="flex-row md:justify-between md:items-center gap-1 md:h-auto pt-48 pb-48"
+      className="flex-row md:justify-between md:items-center gap-1 pt-48 pb-48 top-[30px]  relative bg-opaque-black h-[790px]"
     >
-      <div className="z-30 basis-2/5 mt-5 md:mt-15 flex flex-row items-center justify-center	 ">
+
+      <div className="z-30 basis-2/5 mt-5 md:mt-15 flex flex-row items-center justify-center ">
         <img
           alt="profile"
           className="relative top-[-100px] saturate-200 z-10 w-full max-w-[500px]"
@@ -39,9 +40,14 @@ const Landing = ({ setSelectedPage }) => {
             </p>
 
             <p className="mt-10 mb-7 text-2xl text-center md:text-row ">
-              Front End Web Developer with extensive teamwork experience. <br />
-              I define myself by my passion for what I do, my perseverance, my commitment to continue learning, and my desire for a collaborative environment. <br />
-              I aim to appreciate and value the process while finding motivation through every accomplished goal. <br /> 
+              Design and development of applications specializing in: <br />
+              JavaScript, React, Next, Angular, Tailwind, and MUI
+              <br />
+              and proficient in TypeScript and Bootstrap.
+              <br />I focus on developing modular and scalable designs and
+              applications that meet the client's needs using agile
+              methodologies to reach the final product. This allows me to
+              develop communication, negotiation, and adaptability skills.
             </p>
           </motion.div>
 
@@ -87,7 +93,7 @@ const Landing = ({ setSelectedPage }) => {
   ) : (
     <section
       id="home"
-      className="flex flex-col md:justify-between md:items-center gap-1 md:h-auto pt-10 pb-10"
+      className="flex-row md:justify-between md:items-center gap-1 pt-5 pb-5 top-[15px] w-[105%] p-5 h-[auto]  relative bg-opaque-black "
     >
       <div className="z-30 basis-2/5 mt-5 md:mt-15 flex flex-col items-center justify-center	 ">
         <img
@@ -108,23 +114,21 @@ const Landing = ({ setSelectedPage }) => {
           >
             <p className="text-[22px] font-playfair z-10 text-center ">
               Juan Ignacio {""}
-              <span className=" text-green3 z-20">
-                Mascarenhas
-              </span>
+              <span className=" text-green3 z-20">Mascarenhas</span>
               <p className="text-lg font-playfair text-semibold text-green3 text-center m-2">
                 Frontend Web Developer
               </p>
             </p>
 
             <p className="mt-5 mb-7 text-lg text-center md:text-row ">
-              Music Jazz Professor and Front End Web Developer with extensive
-              teamwork experience. <br />
-              My purpose is to enjoy and value the process while finding
-              motivation through every accomplished goal. <br />
-              I’m defined by the passion for what I do, the perseverance and
-              dedication to overcome difficult situations, the commitment to
-              continue learning, the enjoyment of team working and the drive for
-              constant self-improvement.
+              Design and development of applications specializing in JavaScript,
+              React, Next, Angular, Tailwind, and MUI.
+              <br />
+              Proficient in TypeScript and Bootstrap.
+              <br />I focus on developing modular and scalable designs and
+              applications that meet the client's needs using agile
+              methodologies to reach the final product. This allows me to
+              develop communication, negotiation, and adaptability skills.
             </p>
           </motion.div>
 

@@ -26,7 +26,7 @@ const Project = ({ title }) => {
       <img
         src={require(`../assets/${projectTitle}.png`)}
         alt={projectTitle}
-        className="border-2"
+        className=" w-[270px]"
       />
     </motion.div>
   );
@@ -36,7 +36,10 @@ const Projects = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   return isAboveLarge ? (
-    <section id="projects" className="pt-48 pb-48 ">
+    <section
+      id="projects"
+      className="pt-[100px] pb-[100px] relative bg-opaque-black top-[30px]"
+    >
       <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
@@ -59,7 +62,7 @@ const Projects = () => {
       </motion.div>
 
       {/* PROJECTS */}
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
         {/* PROJECT 1 */}
         <motion.div
           className="flex items-center flex-col"
@@ -69,7 +72,7 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* PROJECT 1 */}
-          <div className=" grid grid-cols-2 m-5 text-center items-center p-5 text-xl font-playfair">
+          <div className=" grid grid-cols-2 m-5 text-center items-center p-5 text-xl font-playfair ">
             {/* IMG */}
             <div className="relative right-[-10%] max-w-[600px]">
               <a
@@ -83,7 +86,7 @@ const Projects = () => {
             </div>
 
             {/* DATA */}
-            <div className="">
+            <div className="z-[100] text-start">
               {/* NAME */}
               <p className="font-playfair font-semibold mt-5">
                 <span className="text-green3">JIM'S COUNTRIES </span>WEB SITE
@@ -128,7 +131,7 @@ const Projects = () => {
         >
           <div className=" grid grid-cols-2 m-5 text-center items-center p-5 text-xl font-playfair ">
             {/* DATA */}
-            <div>
+            <div className="z-[100] text-end">
               {/* NAME */}
               <p className="font-playfair font-semibold mt-5">
                 <span className="text-green3">GROOVE TICKETS </span>WEB SITE
@@ -178,10 +181,104 @@ const Projects = () => {
         <div className="flex justify-center m-7">
           <LineGradient width="w-1/6" />
         </div>
+        {/* PROJECT 3 */}
+        <motion.div
+          className="flex items-center flex-col"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {/* PROJECT 3 */}
+          <div className=" grid grid-cols-2 m-5 text-center items-center p-5 text-xl font-playfair">
+            {/* IMG */}
+            <div className="relative right-[-10%] max-w-[600px]">
+              <a
+                href="https://mascarenhas-dev.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+                referencepolicy="no-referrer-when-downgrade"
+              >
+                <GlassEffect title="JIM Porfolio" />
+              </a>
+            </div>
+
+            {/* DATA */}
+            <div className="z-[100] text-start">
+              {/* NAME */}
+              <p className="font-playfair font-semibold mt-5">
+                <span className="text-green3">JIM'S PORFOLIO </span>WEB SITE
+              </p>
+              {/* TEXT */}
+              <div className="flex justify-center items-center flex-col text-xl ">
+                <p>
+                  Design and development of a portfolio to provide personal and
+                  professional information.
+                </p>
+                {/* GH */}
+                <div className=" p-5 flex flex-row justify-center">
+                  <p className="p-3 text-xl font-playfair font-semibold text-green3">
+                    GITHUB:
+                  </p>
+
+                  <GitHubSVG href="https://github.com/JIM90mdp/JIM-Porfolio" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <div className="flex justify-center m-7">
+          <LineGradient width="w-1/6" />
+        </div>
+        {/* PROJECT 4 */}
+        <motion.div
+          className="flex items-center flex-col"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className=" grid grid-cols-2 m-5 text-center items-center p-5 text-xl font-playfair ">
+            {/* DATA */}
+            <div className="z-[100] text-end">
+              {/* NAME */}
+              <p className="font-playfair font-semibold mt-5">
+                <span className="text-green3">MMM - SERVICIOS JURÍDICOS </span>
+                WEB SITE
+              </p>
+              {/* text */}
+              <div classname="flex justify-center items-center flex-col text-xl ">
+                <p>
+                  API for a lawyer client, allowing users to learn about the
+                  legal services provided, submit free legal inquiries, and
+                  access information related to legal services.
+                </p>
+              </div>
+            </div>
+            {/* IMG */}
+
+            <div className="max-w-[600px] relative right-[-10%]">
+              <a
+                href=""
+                rel="noreferrer"
+                target="_blank"
+                referencepolicy="no-referrer-when-downgrade"
+              >
+                <GlassEffect title="MMC ServiciosJuridicos" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
+        <div className="flex justify-center m-7">
+          <LineGradient width="w-1/6" />
+        </div>
       </div>
     </section>
   ) : (
-    <section id="projects" className="pt-20 pb-20 ">
+    <section
+      id="projects"
+      className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5 "
+    >
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -206,6 +303,7 @@ const Projects = () => {
 
       {/* PROJECTS */}
       <div className="flex justify-center flex-col">
+        {/* PROJECTS 1 */}
         <motion.div
           className="flex items-center flex-col"
           variants={container}
@@ -213,7 +311,6 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* ROW 1 */}
           <a
             href="https://jim-countries-vbeb.vercel.app/"
             rel="noreferrer"
@@ -259,6 +356,7 @@ const Projects = () => {
           <LineGradient width="w-2/3" />
         </div>
 
+        {/* PROJECTS 2 */}
         <motion.div
           className="flex items-center flex-col"
           variants={container}
@@ -300,6 +398,79 @@ const Projects = () => {
                 The purpose of the Groove Tickets website is to facilitate the
                 acquisition of tickets for concerts and other live music shows
                 and to provide detailed information about the events.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+        <div className="flex justify-center m-7">
+          <LineGradient width="w-2/3" />
+        </div>
+        {/* PROJECTS 3 */}
+        <motion.div
+          className="flex items-center flex-col"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <a
+            href="https://mascarenhas-dev.vercel.app/"
+            rel="noreferrer"
+            target="_blank"
+            referencepolicy="no-referrer-when-downgrade"
+          >
+            <Project title="Jim Porfolio" />
+          </a>
+          <div className="flex text-center justify-center items-center flex-col text-lg font-playfair ">
+            <p className="font-playfair font-semibold text-xl">
+              <span className="text-green3">JIM's PORFOLIO </span>WEB SITE
+            </p>
+
+            <div className="flex text-center items-center flex-row w-[80%] h-auto font-playfair">
+              <p className="p-3 text-base font-playfair font-semibold text-green3">
+                GITHUB:
+              </p>
+              <GitHubSVG href="https://github.com/JIM90mdp/JIM-Porfolio" />
+            </div>
+
+            <div className="flex justify-center items-center flex-col  m-5">
+              <p>
+                Design and development of a portfolio to provide personal and
+                professional information.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+        <div className="flex justify-center m-7">
+          <LineGradient width="w-2/3" />
+        </div>
+        {/* PROJECTS 4 */}
+        <motion.div
+          className="flex items-center flex-col"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <a
+            href=""
+            rel="noreferrer"
+            target="_blank"
+            referencepolicy="no-referrer-when-downgrade"
+          >
+            <Project title="MMC ServiciosJuridicos" />
+          </a>
+          <div className="flex text-center justify-center items-center flex-col text-lg font-playfair ">
+            <p className="font-playfair font-semibold text-xl">
+              <span className="text-green3">MMC - SERVICIOS JURÍDICOS</span> <br/> WEB
+              SITE
+            </p>
+
+            <div className="flex justify-center items-center flex-col  m-5">
+              <p>
+                API for a lawyer client, allowing users to learn about the legal
+                services provided, submit free legal inquiries, and access
+                information related to legal services.
               </p>
             </div>
           </div>

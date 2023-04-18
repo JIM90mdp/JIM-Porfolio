@@ -6,9 +6,9 @@ const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   return isAboveLarge ? (
-    <section id="skills" className=" pb-24">
+    <section id="skills" className="pt-[100px] pb-[100px] relative bg-opaque-black top-[30px] h-[790px]">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="md:flex md:justify-between">
         <motion.div
           className="md:w-2/5 mx-auto text-center"
           initial="hidden"
@@ -415,9 +415,9 @@ const MySkills = () => {
       </div>
     </section>
   ) : (
-    <section id="skills" className="pb-10">
+    <section id="skills" className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5">
       {/* HEADER  */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="md:flex md:justify-between ">
         <motion.div
           className="md:w-2/5 mx-auto text-center"
           initial="hidden"

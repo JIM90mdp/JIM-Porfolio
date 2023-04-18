@@ -20,7 +20,7 @@ const Contact = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     }
   };
   return isDesktop ? (
-    <section id="contact" className="contact py-48">
+    <section id="contact" className="contact py-48 relative bg-opaque-black top-[30px] ">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"
@@ -122,7 +122,7 @@ const Contact = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       </div>
     </section>
   ) : (
-    <section id="contact" className="contact py-20">
+    <section id="contact" className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"

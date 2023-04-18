@@ -40,6 +40,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const navbarBackground = isTopOfPage ? "" : "bg-opaque-black";
+  const navbarBackgroundQuery = isTopOfPage ? "" : "bg-green1";
   const hiddenMenu = isMenuToggled ? "hidden" : "";
 
   console.log("isDesktop", isDesktop);
@@ -63,14 +64,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             page="Home"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
-          />
+          />{" "}
           <Link
-            page="Skills"
+            page="Projects"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
           <Link
-            page="Projects"
+            page="Skills"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
@@ -83,7 +84,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       </div>
     </nav>
   ) : (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackgroundQuery} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between w-5/6">
         <h4 className="font-playfair text-3xl font-bold text-green3 pl-[40px]">
           JIM
@@ -95,11 +96,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           <BsList className="h-[33px] w-[33px] text-green3" />
         </button>
         {!isDesktop && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full bg-opaque-black w-[100px] text-green">
+          <div className="fixed right-0 bottom-0 h-full bg-green1 w-[100px] text-green">
             {/* CLOSE ICON */}
             <div className="relative flex justify-end p-[44px] text-xl text-semibold top-[-20px]">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <BsList className="text-green3"/>
+                <BsList className="text-green3 relative top-[10px]" />
               </button>
             </div>
 
@@ -111,15 +112,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Skills"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
+              <Link
+                page="Skills"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+
               <Link
                 page="Contact"
                 selectedPage={selectedPage}
