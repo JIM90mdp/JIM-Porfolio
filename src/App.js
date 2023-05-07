@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div className="app">
+      {/* BG-VIDEO */}
       <video
         autoPlay
         loop
@@ -39,6 +40,7 @@ function App() {
         <source src={clip} type="video/mp4" />
         <source src={clip} type="video/ogg" />
       </video>
+
       {/* NAVBAR */}
       <Navbar
         isTopOfPage={isTopOfPage}
@@ -46,6 +48,7 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
 
+      {/* LANDING */}
       <div className="w-5/6  mx-auto md:h-auto ">
         <motion.div
           margin="0 0 -200px 0"
@@ -55,11 +58,9 @@ function App() {
           <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
+
       {/* PROJECT */}
-      <div className="flex justify-center m-7 relative z-50">
-        <LineGradient width="w-[90%]" />
-      </div>
-      <div className="w-5/6 mx-auto">
+      <div className="w-5/6 mx-auto mt-7">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -68,12 +69,9 @@ function App() {
           <Projects />
         </motion.div>
       </div>
-      {/* SKILLS */}
-      <div className="flex justify-center m-7  relative z-50">
-        <LineGradient width="w-[90%]" />
-      </div>
 
-      <div className="w-5/6 mx-auto relative ">
+      {/* SKILLS */}
+      <div className="w-5/6 mx-auto mt-7 ">
         <motion.div
           margin="0 0 0 0"
           amount="all"
@@ -83,11 +81,7 @@ function App() {
         </motion.div>
       </div>
 
-      <div className="flex justify-center m-7  relative z-50">
-        <LineGradient width="w-[90%]" />
-      </div>
-
-      <div className="w-5/6 mx-auto ">
+      <div className="w-5/6 mx-auto mt-7">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -97,10 +91,7 @@ function App() {
         </motion.div>
       </div>
 
-      <div className="flex justify-center m-7  relative z-50">
-        <LineGradient width="w-[90%]" />
-      </div>
-      <div className="relative z-50">
+      <div className="w-5/6 mx-auto mt-7">
         <Footer />
       </div>
     </div>

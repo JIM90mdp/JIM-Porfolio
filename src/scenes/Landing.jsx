@@ -1,3 +1,4 @@
+import LineGradient from "../components/LineGradient";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
@@ -9,15 +10,25 @@ const Landing = ({ setSelectedPage }) => {
   return isAboveLarge ? (
     <section
       id="home"
-      className="flex-row md:justify-between md:items-center gap-1 pt-48 pb-48 top-[30px]  relative bg-opaque-black h-[790px]"
+      className="top-[30px] relative bg-opaque-black h-[790px]"
     >
-
-      <div className="z-30 basis-2/5 mt-5 md:mt-15 flex flex-row items-center justify-center ">
-        <img
-          alt="profile"
-          className="relative top-[-100px] saturate-200 z-10 w-full max-w-[500px]"
-          src={require("../assets/profile-image.png")}
-        />
+      <div className="relative top-[40px]   z-30 w-[100%] h-[100%] flex flex-row items-center justify-center ">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <img
+            alt="profile"
+            className="relative top-[-100px] saturate-200 z-10 max-w-[500px]"
+            src={require("../assets/profile-image.png")}
+          />
+        </motion.div>
         <div className="flex flex-col items-center justify-center ">
           <motion.div
             initial="hidden"
@@ -29,17 +40,28 @@ const Landing = ({ setSelectedPage }) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="text-6xl font-playfair z-10 text-center ">
+            {/* <p className="text-6xl font-playfair text-center ">
               Juan Ignacio {""}
-              <span className="xs:relative xs:text-green3 xs:font-semibold z-20 ">
+              <span className="xs:relative xs:text-green3 xs:font-semibold ">
                 Mascarenhas
               </span>
               <p className="text-3xl font-playfair text-center m-2">
                 Frontend Web Developer
               </p>
-            </p>
+            </p> */}
+            <div className="flex flex-row items-center justify-evenly ">
+              <h4 className="py-4 text-xl">
+                Hello <span className="green">I'am</span>
+              </h4>
+              <h1 className="text-2xl font-serif tracking-wider">
+                Juan I. Mascarenhas
+              </h1>
+              <h3 className=" text-xl">
+                Frontend Developer and UX/UI Designer{" "}
+              </h3>
+            </div>
 
-            <p className="mt-10 mb-7 text-2xl text-center md:text-row ">
+            <p className="mt-10 mb-7 text-2xl text-center">
               Design and development of applications specializing in: <br />
               JavaScript, React, Next, Angular, Tailwind, and MUI
               <br />
@@ -49,12 +71,14 @@ const Landing = ({ setSelectedPage }) => {
               methodologies to reach the final product. This allows me to
               develop communication, negotiation, and adaptability skills.
             </p>
+
+
           </motion.div>
 
           {/* CALL TO ACTIONS */}
 
           <motion.div
-            className="flex mt-5 justify-center md:justify-start"
+            className="flex justify-center "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -89,6 +113,7 @@ const Landing = ({ setSelectedPage }) => {
           </motion.div>
         </div>
       </div>
+      <LineGradient width="w-[100%]" className="bottom-0 relative" />
     </section>
   ) : (
     <section

@@ -38,10 +38,10 @@ const Projects = () => {
   return isAboveLarge ? (
     <section
       id="projects"
-      className="pt-[100px] pb-[100px] relative bg-opaque-black top-[30px]"
+      className=" relative bg-opaque-black top-[30px]"
     >
       <motion.div
-        className="md:w-2/5 mx-auto text-center"
+        className="md:w-2/5 mx-auto text-center relative top-[30px]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -52,10 +52,10 @@ const Projects = () => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
+          <p className="font-playfair font-semibold text-4xl ">
             <span className="text-green3">PROJECTS</span>
           </p>
-          <div className="flex justify-center m-7">
+          <div className="flex justify-center ">
             <LineGradient width="w-2/3" />
           </div>
         </div>
@@ -273,6 +273,9 @@ const Projects = () => {
           <LineGradient width="w-1/6" />
         </div>
       </div>
+      <div className="relative bottom-0">
+        <LineGradient width="w-[100%]" className="" />
+      </div>
     </section>
   ) : (
     <section
@@ -462,8 +465,8 @@ const Projects = () => {
           </a>
           <div className="flex text-center justify-center items-center flex-col text-lg font-playfair ">
             <p className="font-playfair font-semibold text-xl">
-              <span className="text-green3">MMC - SERVICIOS JURÍDICOS</span> <br/> WEB
-              SITE
+              <span className="text-green3">MMC - SERVICIOS JURÍDICOS</span>{" "}
+              <br /> WEB SITE
             </p>
 
             <div className="flex justify-center items-center flex-col  m-5">

@@ -6,34 +6,33 @@ const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   return isAboveLarge ? (
-    <section id="skills" className="pt-[100px] pb-[100px] relative bg-opaque-black top-[30px] h-[790px]">
+    <section id="skills" className=" relative bg-opaque-black top-[30px]">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between">
-        <motion.div
-          className="md:w-2/5 mx-auto text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          <div>
-            <p className="font-playfair font-semibold text-4xl">
-              <span className="text-green3">SKILLS</span>
-            </p>
-            <div className="flex justify-center m-7">
-              <LineGradient width="w-2/3" />
-            </div>
-          </div>
-          <p className="mt-10 mb-7 text-2xl">
-            I’m a curious person, an avid reader, a cheerful spirit and an
-            instinctive creative self.
+
+      <motion.div
+        className="md:w-2/5 mx-auto text-center relative top-[30px]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
+        <div>
+          <p className="font-playfair font-semibold text-4xl">
+            <span className="text-green3">SKILLS</span>
           </p>
-        </motion.div>
-      </div>
+          <div className="flex justify-center m-7">
+            <LineGradient width="w-2/3" />
+          </div>
+        </div>
+        <p className="mt-10 mb-7 text-2xl">
+          I’m a curious person, an avid reader, a cheerful spirit and an
+          instinctive creative self.
+        </p>
+      </motion.div>
 
       {/* SKILLS */}
       <div className="grid grid-cols-2 mt-16 text-xl">
@@ -413,9 +412,13 @@ const MySkills = () => {
           </div>
         </motion.div>
       </div>
+      <LineGradient width="w-[100%]" className="" />
     </section>
   ) : (
-    <section id="skills" className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5">
+    <section
+      id="skills"
+      className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5"
+    >
       {/* HEADER  */}
       <div className="md:flex md:justify-between ">
         <motion.div
