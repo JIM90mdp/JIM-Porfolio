@@ -55,7 +55,7 @@ const Projects = () => {
           <p className="font-playfair font-semibold text-4xl ">
             <span className="text-green3">PROJECTS</span>
           </p>
-          <div className="flex justify-center ">
+          <div className="flex justify-center m-3">
             <LineGradient width="w-2/3" />
           </div>
         </div>

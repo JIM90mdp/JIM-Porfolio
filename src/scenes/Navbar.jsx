@@ -17,7 +17,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
     <AnchorLink
       className={`${
         selectedPage === lowerCasePage ? "text-green" : ""
-      } hover:text-green transition duration-500`}
+      } hover:text-green1 transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -45,6 +45,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
   console.log("isDesktop", isDesktop);
 
+  // return isDesktop ? (
   return isDesktop ? (
     <nav
       className={`${navbarBackground} flex flex-col z-40 w-[auto] fixed top-[205px] left-7 `}
@@ -86,11 +87,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   ) : (
     <nav className={`${navbarBackgroundQuery} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between w-5/6">
-        <h4 className="font-playfair text-3xl font-bold text-green3 pl-[40px]">
+        <h4 className="font-playfair text-3xl font-bold text-green3 pl-[40px] pt-4">
           JIM
         </h4>
         <button
-          className={`${hiddenMenu} rounded-full bg-red position: relative right-[-20px] `}
+          className={`${hiddenMenu} rounded-full bg-red position: relative right-[-20px] pt-4 `}
           onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
           <BsList className="h-[33px] w-[33px] text-green3" />

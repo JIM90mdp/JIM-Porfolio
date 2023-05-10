@@ -18,10 +18,11 @@ module.exports = {
           "linear-gradient(90deg, rgba(53,89,61,1) 2%, rgba(58,97,42,1) 24%, rgba(151,179,130,1) 38%, rgba(221,239,207,1) 71%)",
       }),
       fontFamily: {
-        playfair: ['Inria Serif', "serif"],
+        playfair: ["Inria Serif", "serif"],
+        mono: ["ui-monospace", "SFMono-Regular"],
       },
       content: {
-        me: "url('./assets/profile-image.png')", 
+        me: "url('./assets/profile-image.png')",
       },
     },
     screens: {

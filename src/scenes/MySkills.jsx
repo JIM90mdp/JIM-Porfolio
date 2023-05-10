@@ -10,7 +10,7 @@ const MySkills = () => {
       {/* HEADER AND IMAGE SECTION */}
 
       <motion.div
-        className="md:w-2/5 mx-auto text-center relative top-[30px]"
+        className="mx-auto text-center relative top-[30px] flex flex-col justify-center items-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -20,17 +20,21 @@ const MySkills = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <div>
+        <div  className="w-[100%] flex flex-col justify-center items-center">
           <p className="font-playfair font-semibold text-4xl">
             <span className="text-green3">SKILLS</span>
           </p>
-          <div className="flex justify-center m-7">
+          <div className="flex justify-center m-3 w-[40%]">
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-7 text-2xl">
-          I’m a curious person, an avid reader, a cheerful spirit and an
-          instinctive creative self.
+        <p className="mt-10 mb-7 text-2xl w-[115%] text-center font-mono">
+        I am defined by passion, perseverance, and dedication to what I do. 
+        <br/>
+        I am committed to continuing to learn, enjoy working with teams, and drive for constant self-improvement. 
+        <br/>
+        I am a curious person, an avid reader, a cheerful spirit, and instinctively creative.
+        
         </p>
       </motion.div>
 
@@ -49,7 +53,7 @@ const MySkills = () => {
         >
           <div className="flex flex-col items-center m-5">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-4xl m-5">
+              <p className="font-playfair font-semibold text-4xl m-5 text-green3">
                 Technologies
               </p>
             </div>
@@ -398,7 +402,7 @@ const MySkills = () => {
         >
           <div className="flex flex-col items-center m-5">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-4xl m-5">
+              <p className="font-playfair font-semibold text-4xl m-5 text-green3">
                 Soft Skills
               </p>
             </div>
@@ -412,7 +416,7 @@ const MySkills = () => {
           </div>
         </motion.div>
       </div>
-      <LineGradient width="w-[100%]" className="" />
+      <LineGradient width="w-[100%]" />
     </section>
   ) : (
     <section

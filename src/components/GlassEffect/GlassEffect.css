@@ -4,7 +4,7 @@
   
   .container::before, .container::after {
     content: "";
-    background-color: #fab5704c;
+    background-color: #64f74a4c;
     position: absolute;
   }
 
@@ -46,6 +46,6 @@
   }
   
   .container .box:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
+    box-shadow: 0px 0px 20px 1px #64f74a6d;
     border: 1px solid rgba(255, 255, 255, 0.454);
   }

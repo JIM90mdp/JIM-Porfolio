@@ -20,7 +20,8 @@ const Contact = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     }
   };
   return isDesktop ? (
-    <section id="contact" className="contact py-48 relative bg-opaque-black top-[30px] ">
+    <section id="contact" className="contact relative bg-opaque-black top-[30px] ">
+      
       {/* HEADINGS */}
       <motion.div
         initial="hidden"
@@ -34,7 +35,7 @@ const Contact = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         className="flex justify-center w-full"
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
+          <p className="font-playfair font-semibold text-4xl pt-7">
             <span className="text-green3">FEEL FREE TO CONTACT ME</span>
           </p>
           <div className="flex md:justify-center my-5">
@@ -114,12 +115,13 @@ const Contact = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               </p>
             )}
 
-            <div className="flex justify-center text-center m-5">
+            <div className="flex justify-center text-center m-5 pb-7">
               <ButtonSend type="submit" />
             </div>
           </form>
         </motion.div>
       </div>
+      <LineGradient width="w-[100%]" className="bottom-0 relative" />
     </section>
   ) : (
     <section id="contact" className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5">
