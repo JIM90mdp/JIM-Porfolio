@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
-import BurgerX from "../components/Burger/BurgerX";
+import { motion } from "framer-motion";
 
 import {
   BsFillBriefcaseFill,
@@ -16,8 +16,8 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   return (
     <AnchorLink
       className={`${
-        selectedPage === lowerCasePage ? "text-green" : ""
-      } hover:text-green1 transition duration-500`}
+        selectedPage === lowerCasePage ? "text-dark-green" : ""
+      } hover:text-green transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -44,6 +44,33 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const hiddenMenu = isMenuToggled ? "hidden" : "";
 
   console.log("isDesktop", isDesktop);
+
+  const menuVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const menuItemVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
 
   // return isDesktop ? (
   return isDesktop ? (
@@ -97,38 +124,68 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           <BsList className="h-[33px] w-[33px] text-green3" />
         </button>
         {!isDesktop && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full bg-green1 w-[100px] text-green">
+          <div className="fixed right-0 top-0 h-[380px] w-[50px] pr-3 text-green3 bg-white border border-grey">
             {/* CLOSE ICON */}
-            <div className="relative flex justify-end p-[44px] text-xl text-semibold top-[-20px]">
+            <div className="relative ml-[25%] pb-[44px] pt-5 text-xl text-semibold top-[-10px]">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <BsList className="text-green3 relative top-[10px]" />
+                <BsList className="h-[33px] w-[33px] text-green3 relative top-[10px]" />
               </button>
             </div>
 
             {/* MENU ITEMS */}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-green3 hover:text-green3">
-              <Link
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Projects"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Skills"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
+            <motion.div
+              variants={menuVariants}
+              initial="hidden"
+              animate={isMenuToggled ? "visible" : "hidden"}
+            >
+              <div className="flex flex-col gap-10 ml-[33%] text-2xl text-green3 hover:text-green3">
+                <motion.div
+                  key="1"
+                  variants={menuItemVariants}
+                  style={{ marginBottom: "10px" }}
+                >
+                  <Link
+                    page="Home"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                </motion.div>
+                <motion.div
+                  key="2"
+                  variants={menuItemVariants}
+                  style={{ marginBottom: "10px" }}
+                >
+                  <Link
+                    page="Projects"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                </motion.div>
+                <motion.div
+                  key="3"
+                  variants={menuItemVariants}
+                  style={{ marginBottom: "10px" }}
+                >
+                  <Link
+                    page="Skills"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                </motion.div>
 
-              <Link
-                page="Contact"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-            </div>
+                <motion.div
+                  key="4"
+                  variants={menuItemVariants}
+                  style={{ marginBottom: "10px" }}
+                >
+                  <Link
+                    page="Contact"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         )}
       </div>

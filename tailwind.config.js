@@ -6,9 +6,9 @@ module.exports = {
     extend: {
       colors: {
         "deep-green": "#1f492a",
-        green1: "#12262c",
+        green1: "#ddefcf54",
         green2: "#a6f285",
-        green3: "#8BF63B",
+        green3: "#97b382",
         green: "#ddefcf",
         "dark-green": "#12280c",
         "opaque-black": "rgba(0,0,0,0.35)",
@@ -20,9 +20,6 @@ module.exports = {
       fontFamily: {
         playfair: ["Inria Serif", "serif"],
         mono: ["ui-monospace", "SFMono-Regular"],
-      },
-      content: {
-        me: "url('./assets/profile-image.png')",
       },
     },
     screens: {

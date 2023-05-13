@@ -1,11 +1,9 @@
 import Navbar from "./scenes/Navbar";
 import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
-import LineGradient from "./components/LineGradient";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
-import useMediaQuery from "./hooks/useMediaQuery";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import clip from "../src/assets/mar-de-fondo.mp4";
@@ -31,7 +29,7 @@ function App() {
   return (
     <div className="app">
       {/* BG-VIDEO */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -39,7 +37,7 @@ function App() {
       >
         <source src={clip} type="video/mp4" />
         <source src={clip} type="video/ogg" />
-      </video>
+      </video> */}
 
       {/* NAVBAR */}
       <Navbar
@@ -81,6 +79,7 @@ function App() {
         </motion.div>
       </div>
 
+      {/* CONTACT */}
       <div className="w-5/6 mx-auto mt-7">
         <motion.div
           margin="0 0 -200px 0"
