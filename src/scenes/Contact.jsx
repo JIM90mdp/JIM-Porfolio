@@ -124,7 +124,7 @@ const Contact = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       <LineGradient width="w-[100%]" className="bottom-0 relative" />
     </section>
   ) : (
-    <section id="contact" className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5">
+    <section id="contact" className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[100%] p-5">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"

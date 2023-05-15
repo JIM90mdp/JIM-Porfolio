@@ -40,7 +40,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const navbarBackground = isTopOfPage ? "" : "bg-opaque-black";
-  const navbarBackgroundQuery = isTopOfPage ? "" : "bg-green1";
+  const navbarBackgroundQuery = isTopOfPage ? "" : "bg-green-bg";
   const hiddenMenu = isMenuToggled ? "hidden" : "";
 
   console.log("isDesktop", isDesktop);
@@ -114,17 +114,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   ) : (
     <nav className={`${navbarBackgroundQuery} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between w-5/6">
-        <h4 className="font-playfair text-3xl font-bold text-green3 pl-[40px] pt-4">
+        <h4 className="font-playfair text-3xl font-bold text-green3 pl-[50px] pt-4">
           JIM
         </h4>
         <button
-          className={`${hiddenMenu} rounded-full bg-red position: relative right-[-20px] pt-4 `}
-          onClick={() => setIsMenuToggled(!isMenuToggled)}
+          className={`${hiddenMenu} rounded-full bg-red position: relative right-[-15px] pt-4 `}
+          onClick={() => setIsMenuToggled(!isMenuToggled)}  
         >
           <BsList className="h-[33px] w-[33px] text-green3" />
         </button>
         {!isDesktop && isMenuToggled && (
-          <div className="fixed right-0 top-0 h-[380px] w-[50px] pr-3 text-green3 bg-white border border-grey">
+          <div className="fixed right-7 top-8 h-[380px] w-[50px] pr-3 text-green3 bg-green-bg ">
             {/* CLOSE ICON */}
             <div className="relative ml-[25%] pb-[44px] pt-5 text-xl text-semibold top-[-10px]">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

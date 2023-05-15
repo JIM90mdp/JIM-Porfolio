@@ -10,6 +10,7 @@ module.exports = {
         green2: "#a6f285",
         green3: "#97b382",
         green: "#ddefcf",
+        "green-bg": "rgb(63, 92, 63)",
         "dark-green": "#12280c",
         "opaque-black": "rgba(0,0,0,0.35)",
       },

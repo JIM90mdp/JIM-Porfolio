@@ -35,7 +35,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="sm:flex-row sm:justify-between bg-opaque-black sm:h-[auto] sm:w-[100%] relative top-[30px] w-[105%]"
+      className="sm:flex-row sm:justify-between bg-opaque-black sm:h-[auto] sm:w-[100%] relative top-[30px] w-[100%]"
     >
       <motion.div
         className="md:w-2/5 mx-auto text-center sm:relative sm:top-[30px]"
@@ -49,7 +49,7 @@ const Projects = () => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl ">
+          <p className="relative top-[15px] font-playfair font-semibold text-4xl ">
             <span className="text-green3">PROJECTS</span>
           </p>
           <div className="flex justify-center m-7 sm:m-3">

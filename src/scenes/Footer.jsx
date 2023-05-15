@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
     </footer>
   ) : (
-    <footer className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[105%] p-5">
+    <footer className="relative bg-opaque-black pt-5 pb-5 top-[15px] w-[100%] p-5">
     <div className=" flex flex-col justify-center items-center">
       <div className=" text-2xl flex flex-row justify-evenly">
        <p> JUAN IGNACIO </p> <p className=" text-2xl pl-1 text-green3">MASCARENHAS</p>

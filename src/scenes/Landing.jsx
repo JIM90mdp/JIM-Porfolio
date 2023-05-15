@@ -8,7 +8,7 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="sm:h-[790px] sm:flex-row sm:justify-between bg-opaque-black h-[100%] sm:w-[100%] relative top-[30px] w-[105%]"
+      className="sm:h-[790px] sm:flex-row sm:justify-between bg-opaque-black h-[100%] sm:w-[100%] relative top-[30px] w-[100%]"
     >
       <LineGradient width="w-[100%]" />
       <div className="sm:relative sm:top-[40px] z-30 sm:w-[100%] sm:h-[100%] flex flex-col items-center justify-center sm:pt-0 pt-9 ">

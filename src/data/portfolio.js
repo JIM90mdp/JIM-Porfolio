@@ -1,8 +1,11 @@
 export const greetings = {
   title: "Welcome!",
   name: "Juan I. Mascarenhas",
-  subTitle:"Frontend Web Developer",
-  desc: ["I’m embracing a new obsession, learning Front-End Web Development.", "I have experience building Applications with JavaScript, React, Node, Express, Redux, Next and some other cool libraries and frameworks."],
+  subTitle: "Frontend Web Developer",
+  desc: [
+    "I’m embracing a new obsession, learning Front-End Web Development.",
+    "I have experience building Applications with JavaScript, React, Node, Express, Redux, Next and some other cool libraries and frameworks.",
+  ],
 };
 
 export const openSource = {
@@ -22,6 +25,7 @@ export const skillsSection = {
   data: [
     {
       title: "Front-End Development",
+      lottieAnimationFile: "../../public/lottie/webdev.json",
       skills: [
         " Design and development of applications specializing in: JavaScript, React, Nextjs and Tailwind",
         " Proficient in Angular, TypeScript, MUI and Bootstrap",
@@ -29,12 +33,24 @@ export const skillsSection = {
       ],
       softwareSkills: [
         {
-          skillName: "python",
-          fontAwesomeClassname: "logos:python",
+          skillName: "html",
+          fontAwesomeClassname: "skill-icons:html",
         },
         {
-          skillName: "reactjs",
-          fontAwesomeClassname: "vscode-icons:file-type-reactjs",
+          skillName: "css",
+          fontAwesomeClassname: "skill-icons:css",
+        },
+        {
+          skillName: "javascript",
+          fontAwesomeClassname: "skill-icons:javascript",
+        },
+        {
+          skillName: "typescript",
+          fontAwesomeClassname: "logos:typescript-icon-round",
+        },
+        {
+          skillName: "python",
+          fontAwesomeClassname: "logos:python",
         },
         {
           skillName: "nodejs",
@@ -45,17 +61,38 @@ export const skillsSection = {
           fontAwesomeClassname: "logos:npm-icon",
         },
         {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "logos:postgresql",
+          skillName: "reactjs",
+          fontAwesomeClassname: "vscode-icons:file-type-reactjs",
         },
         {
-          skillName: "Vercel",
+          skillName: "nextJS",
+          fontAwesomeClassname: "logos:nextjs-icon",
+        },
+
+        {
+          skillName: "tailwindcss",
+          fontAwesomeClassname: "devicon:tailwindcss",
+        },
+        {
+          skillName: "vercel",
           fontAwesomeClassname: "logos:vercel-icon",
         },
         {
-          skillName: "NextJS",
-          fontAwesomeClassname: "logos:nextjs-icon",
+          skillName: "figma",
+          fontAwesomeClassname: "logos:figma",
         },
+      ],
+      softSkills: [
+        "Communication",
+        "Proble solving",
+        "Time management",
+        "Teamwork",
+        "Adaptability",
+        "Organizational",
+        "Critical thinking",
+        "Leadership",
+        "Patience",
+        "Creativity",
       ],
     },
   ],
