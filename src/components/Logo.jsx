@@ -5,18 +5,19 @@ const Logo = () => {
   const word = "Juan I. Mascarenhas";
 
   return (
-    <div className="relative h-auto w-[170px] sm:w-[400px] flex text-center flex-col justify-center">
+    <div className="relative h-auto w-[230px] sm:w-[400px] flex text-center flex-col justify-center">
       <motion.h1
         initial={{ y: -100, opacity: 0 }}
         // animate={{ y: 0, opacity: 1 }}
-        whileInView={{y: 0, opacity: 1}}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="text-6xl sm:text-9xl font-mono relative z-10 text-green3 "
+        className="text-7xl sm:text-9xl font-mono relative z-10 text-green3 "
       >
         JIM
       </motion.h1>
-      <motion.p className="absolute font-Babylonica text-md sm:text-5xl  top-[25%] sm:top-[30%] mt-2 z-20 h-auto w-[170px] sm:w-[400px]">
-        {word.split("").map((letter, index) => (
+      <motion.p className="absolute font-Babylonica text-2xl sm:text-5xl  top-[25%] sm:top-[30%] mt-2 z-20 h-auto w-[230px] sm:w-[400px]">
+        Juan I. Mascarenhas
+        {/* {word.split("").map((letter, index) => (
           <motion.span
             key={index}
             style={{ display: "inline", originY: 0.5 }}
@@ -27,12 +28,12 @@ const Logo = () => {
           >
             {letter}
           </motion.span>
-        ))}
+        ))} */}
       </motion.p>
       <motion.p
         initial={{ x: -100, opacity: 0, rotate: -90 }}
         // animate={{ x: 0, opacity: 1, rotate: 0 }}
-        whileInView={{x: 0, opacity: 1, rotate: 0}}
+        whileInView={{ x: 0, opacity: 1, rotate: 0 }}
         transition={{
           duration: 0.8,
           delay: 1,

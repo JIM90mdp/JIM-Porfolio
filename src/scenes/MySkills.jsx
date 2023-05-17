@@ -36,7 +36,10 @@ const MySkills = () => {
   };
 
   return (
-    <section id="skills" className="relative bg-opaque-black top-[30px] overflow-hidden ">
+    <section
+      id="skills"
+      className="relative bg-opaque-black top-[30px] overflow-hidden "
+    >
       <LineGradient width="w-[100%]" />
       <motion.div
         className="mx-auto text-center relative top-[30px] flex flex-col justify-center items-center"
@@ -95,7 +98,7 @@ const MySkills = () => {
                     return (
                       <Fragment key={i}>
                         <div
-                          className="text-md sm:text-lg shadow-sm sm:shadow-md shadow-white rounded-full p-3 m-3 bg-white h-[40px] w-[40px] sm:h-[60px] sm:w-[60px] flex justify-center items-center"
+                          className="text-md sm:text-lg shadow-sm sm:shadow-md shadow-white rounded-full p-3 m-3 bg-white h-[60px] w-[60px] flex justify-center items-center"
                           id={skill.skillName.replace(/\s/g, "")}
                         >
                           <Icon
@@ -108,9 +111,9 @@ const MySkills = () => {
                           delay={0}
                           placement="bottom"
                           target={skill.skillName.replace(/\s/g, "")}
-                        > */}
-                          {/* {skill.skillName} */}
-                        {/* </UncontrolledTooltip> */}
+                        >
+                          {skill.skillName}
+                        </UncontrolledTooltip> */}
                       </Fragment>
                     );
                   })}
@@ -120,20 +123,33 @@ const MySkills = () => {
                     SoftSkills
                   </p>
                 </div>
-                <div className="flex justify-center text-center flex-col sm:flex-row sm:wrap mb-2">
-                  {section.softSkills.map((skill, i) => {
-                    return (
-                      <Fragment key={i}>
-                        <div
-                          className="text-md m-1 p-1 sm:text-lg shadow-md shadow-white sm:m-3 sm:p-3  "
-                          id={skill}
+                <motion.div
+                  variants={menuVariants}
+                  initial="hidden"
+                  animate="visible"
+                  
+                >
+                  <div className="flex justify-center text-center flex-col sm:flex-row sm:wrap mb-2">
+                    {section.softSkills.map((skill, i) => {
+                      return (
+                        <motion.div
+                          key="1"
+                          variants={menuItemVariants}
+                          style={{ marginBottom: "10px" }}
                         >
-                          {skill}
-                        </div>
-                      </Fragment>
-                    );
-                  })}{" "}
-                </div>
+                          <Fragment key={i}>
+                            <div
+                              className="text-md m-1 p-1 sm:text-lg shadow-md shadow-white sm:m-3 sm:p-3  "
+                              id={skill}
+                            >
+                              {skill}
+                            </div>
+                          </Fragment>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
               </div>
             );
           })}
