@@ -8,8 +8,36 @@ import { UncontrolledTooltip } from "reactstrap";
 import { Fragment } from "react";
 
 const MySkills = () => {
+  const menuVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const menuItemVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
-    <section id="skills" className="sm:flex-row sm:justify-between bg-opaque-black sm:h-[auto] sm:w-[100%] relative top-[30px] w-[100%]">
+    <section id="skills" className="relative bg-opaque-black top-[30px] overflow-hidden ">
+      <LineGradient width="w-[100%]" />
       <motion.div
         className="mx-auto text-center relative top-[30px] flex flex-col justify-center items-center"
         initial="hidden"
@@ -22,24 +50,22 @@ const MySkills = () => {
         }}
       >
         {/* TITLE SECTION */}
-        <div className="w-[100%] flex flex-col justify-center items-center">
-          <p className="font-playfair font-semibold text-4xl">
-            <span className="text-green3">SKILLS</span>
-          </p>
-          <div className="flex justify-center m-3 w-[40%]">
-            <LineGradient width="w-2/3" />
-          </div>
+        <p className="font-playfair font-semibold text-4xl">
+          <span className="text-green3">SKILLS</span>
+        </p>
+        <div className="flex justify-center m-3 sm:w-[40%] w-[100%]">
+          <LineGradient width="w-2/3" />
         </div>
       </motion.div>
 
       {/* SKILLS */}
       <div className="flex flex-col items-center m-5 justify-center">
         <motion.div
-          className="mt-10"
+          className="mt-10 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -78,13 +104,13 @@ const MySkills = () => {
                             className="h-[40px] w-[40px]"
                           ></Icon>
                         </div>
-                        <UncontrolledTooltip
+                        {/* <UncontrolledTooltip
                           delay={0}
                           placement="bottom"
                           target={skill.skillName.replace(/\s/g, "")}
-                        >
-                          {skill.skillName}
-                        </UncontrolledTooltip>
+                        > */}
+                          {/* {skill.skillName} */}
+                        {/* </UncontrolledTooltip> */}
                       </Fragment>
                     );
                   })}

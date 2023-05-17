@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import clip from "../src/assets/mar-de-fondo.mp4";
 
+
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="app">
       {/* BG-VIDEO */}
-      {/* <video
+      <video
         autoPlay
         loop
         muted
@@ -36,7 +37,7 @@ function App() {
       >
         <source src={clip} type="video/mp4" />
         <source src={clip} type="video/ogg" />
-      </video> */}
+      </video>
 
       {/* NAVBAR */}
       <Navbar

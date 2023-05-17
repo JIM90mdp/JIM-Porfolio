@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         playfair: ["Inria Serif", "serif"],
         mono: ["ui-monospace", "SFMono-Regular"],
+        Babylonica: ["Babylonica", "cursive"],
       },
     },
     screens: {
