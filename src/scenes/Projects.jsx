@@ -90,11 +90,7 @@ const Projects = () => {
               {/* TEXT */}
               <div classname="flex justify-center items-center flex-col text-xl ">
                 <p>
-                  Website created as an individual project of SoyHenry's
-                  Full-Stack Web Development bootcamp.{" "}
-                </p>
-                <p>
-                  The purpose of J.I.M+'s Countries website is to provide
+                  Web Application created to provide
                   information about all countries in the world and create
                   activities, making the tourist trip planning easier.
                 </p>
@@ -147,11 +143,7 @@ const Projects = () => {
               {/* text */}
               <div classname="flex justify-center items-center flex-col text-xl">
                 <p>
-                  Website created as a group project of SoyHenry's Full-Stack
-                  Web Development bootcamp.{" "}
-                </p>
-                <p>
-                  The purpose of the Groove Tickets website is to facilitate the
+                  Website created to facilitate the
                   acquisition of tickets for concerts and other live music shows
                   and to provide detailed information about the events.
                 </p>
