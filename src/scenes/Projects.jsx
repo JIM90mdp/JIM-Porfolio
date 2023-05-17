@@ -252,7 +252,7 @@ const Projects = () => {
               {/* text */}
               <div classname="flex justify-center items-center flex-col text-xl ">
                 <p>
-                  API for a lawyer client, allowing users to learn about the
+                  Web Application for a lawyer customer, allowing users to learn about the
                   legal services provided, submit free legal inquiries, and
                   access information related to legal services.
                 </p>
