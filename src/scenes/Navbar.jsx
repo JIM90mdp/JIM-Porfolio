@@ -43,8 +43,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const navbarBackgroundQuery = isTopOfPage ? "" : "bg-green-bg";
   const hiddenMenu = isMenuToggled ? "hidden" : "";
 
-  console.log("isDesktop", isDesktop);
-
   const menuVariants = {
     hidden: {
       opacity: 0,
