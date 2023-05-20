@@ -5,7 +5,7 @@ const Logo = () => {
   const word = "Juan I. Mascarenhas";
 
   return (
-    <div className="relative h-auto w-[230px] sm:w-[400px] flex text-center flex-col justify-center">
+    <div className="relative h-auto w-[300px] sm:w-[400px] flex text-center flex-col justify-center">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         // animate={{ y: 0, opacity: 1 }}
@@ -15,7 +15,7 @@ const Logo = () => {
       >
         JIM
       </motion.div>
-      <motion.div className="absolute font-Babylonica text-2xl sm:text-5xl  top-[25%] sm:top-[30%] mt-2 z-20 h-auto w-[230px] sm:w-[400px]">
+      <motion.div className="absolute font-Babylonica text-2xl sm:text-5xl  top-[25%] sm:top-[30%] mt-2 z-20 h-auto w-[300px] sm:w-[400px]">
         {word.split("").map((letter, index) => (
           <motion.div
             key={index}

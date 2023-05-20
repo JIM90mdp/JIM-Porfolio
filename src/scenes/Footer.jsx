@@ -8,9 +8,10 @@ const Footer = () => {
   return (
     <section
       id="skills"
-      className="overflow-hidden relative bg-opaque-black top-[30px]"
+      className="overflow-hidden relative bg-opaque-black top-[30px] "
     >
       <LineGradient width="w-[100%]" />
+      {/* Footer content */}
       <motion.div
         className="top-[15px] sm:top-[30px] p-5 sm:p-0 flex flex-col sm:flex-row justify-evenly items-center text-center"
         initial="hidden"
@@ -22,8 +23,10 @@ const Footer = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <Logo />
-        <SocialMediaIcons />
+        <div className="h-auto p-5">
+          <Logo /> {/* Render the logo component */}
+        </div>
+        <SocialMediaIcons /> {/* Render the social media icons component */}
         <p className="text-md w-[65%] sm:w-auto">
           ©2022 MASCARENHAS. All Rights Reserved.
         </p>
