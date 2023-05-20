@@ -166,7 +166,7 @@ export const projects = [
 export const seoData = {
   title: "JIM's Portfolio",
   description:
-    "Front-End Web Developer displaying my portfolio and professional background.",
+    "Front-End Web Developer displaying my portfolio and professional background",
   url: "https://mascarenhas-dev.vercel.app/",
   keywords: [
     "Juan Ignacio Mascarenhas",
