@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import { skillsSection } from "../data/portfolio";
+import { skillsSection } from "../data/dataPortfolio";
 import { UncontrolledTooltip } from "reactstrap";
 import { Fragment } from "react";
 
@@ -83,7 +83,7 @@ const MySkills = () => {
                 <h3 className="relative top-[-30px] text-2xl text-green3">
                   {section.title}
                 </h3>
-                <div className="flex flex-col items-center justify-center text-center h-[100%] w-[100%]">
+                <div className="flex flex-col items-center justify-center text-center h-[100%] w-[100%] text-xl">
                   {section.skills.map((skill, i) => {
                     return <p key={i}>{skill}</p>;
                   })}

@@ -103,13 +103,12 @@ export const educationInfo = [
 
 export const projects = [
   {
-    id: 1,
+    id: 3,
     name: "jim's countries",
     link: "https://jim-countries-vbeb.vercel.app/",
-    imgTitle: "JIM Countries",
+    img: "JIM Countries",
     desc: [
-      "Website created as an individual project of SoyHenry's Full-Stack Web Development bootcamp.",
-      "The purpose of J.I.M+'s Countries website is to provide information about all countries in the world and create activities, making the tourist trip planning easier.",
+      "The purpose of J.I.M+'s Countries website application is to provide information about all countries in the world and create activities, making the tourist trip planning easier.",
       "The information is provided by RESTful Application Program Interface restcountries.com",
     ],
     github: ["https://github.com/JIM90mdp/JIM-Countries"],
@@ -130,8 +129,8 @@ export const projects = [
     name: "groove tickets",
     link: "https://groove-tickets.vercel.app/",
     img: "Groove Tickets",
-    text: [
-      "Website created as a group project of SoyHenry's Full-Stack Web Development bootcamp.",
+    desc: [
+      "Developed an ecommerce website to sell tickets for live music concerts.",
       "The purpose of the Groove Tickets website is to facilitate the acquisition of tickets for concerts and other live music shows and to provide detailed information about the events.",
     ],
     github: [
@@ -152,23 +151,12 @@ export const projects = [
     ],
   },
   {
-    id: 3,
-    name: "jim's porfolio",
-    link: "https://mascarenhas-dev.vercel.app/",
-    img: "JIM Porfolio",
-    text: [
-      "Design and development of a portfolio to provide personal and professional information.",
-    ],
-    github: ["https://github.com/JIM90mdp/JIM-Porfolio"],
-    tags: ["JavaScript", "React", "Next", "Tailwind", "Framer Motion", "VSC"],
-  },
-  {
-    id: 4,
+    id: 1,
     name: "mmc - servicios jurídicos",
     link: "",
-    img: "",
-    text: [
-      "API for a lawyer client, allowing users to learn about the legal services provided, submit free legal inquiries, and access information related to legal services.",
+    img: "MMC ServiciosJuridicos",
+    desc: [
+      "Web application for a lawyer customer, allowing users to learn about the legal services provided, submit free legal inquiries, and access information related to legal services.",
     ],
     github: [],
     tags: ["JavaScript", "React", "Next", "Tailwind", "Framer Motion", "VSC"],
@@ -177,7 +165,8 @@ export const projects = [
 
 export const seoData = {
   title: "JIM's Portfolio",
-  description: "Front-End Web Developer displaying my portfolio and professional background.",
+  description:
+    "Front-End Web Developer displaying my portfolio and professional background.",
   url: "https://mascarenhas-dev.vercel.app/",
   keywords: [
     "Juan Ignacio Mascarenhas",
@@ -189,6 +178,6 @@ export const seoData = {
     "Argentina",
     "Buenos Aires",
     "Mar del Plata",
-    "Open to work", 
+    "Open to work",
   ],
 };

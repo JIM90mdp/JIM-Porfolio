@@ -2,7 +2,7 @@ import LineGradient from "../components/LineGradient";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { greetings } from "../data/portfolio";
+import { greetings } from "../data/dataPortfolio";
 import Logo from "../components/Logo";
 
 const Landing = ({ setSelectedPage }) => {
