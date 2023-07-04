@@ -1,20 +1,10 @@
-<h1 align="center">Welcome to my portfolio 👋</h1>
+# Welcome to my portfolio 👋
 
-<br>
-<h3>
-Welcome to my software developer portfolio template built with React.js and Tailwind, A software development portfolio is an excellent way to demonstrate your expertise and highlight your projects. It's a powerful tool that allows potential clients or employers to see the results of your hard work and expertise, giving you a significant advantage in the job market.
-</h3>
-<br>
-
-<p align="center">
-  <kbd>
-    <img src="../jim-porfolio/src/assets/jim-porfolio.png"></img>
-  </kbd>
-</p>
+Welcome to my software developer portfolio template built with React.js and Tailwind. A software development portfolio is an excellent way to demonstrate your expertise and highlight your projects. It's a powerful tool that allows potential clients or employers to see the results of your hard work and expertise, giving you a significant advantage in the job market.
 
 ## Deploy
 
-Go: https://mascarenhas-dev.vercel.app/
+Go: [https://mascarenhas-dev.vercel.app/](https://mascarenhas-dev.vercel.app/)
 
 ## Getting Started
 
@@ -41,7 +31,7 @@ $ cd jim-porfolio
 # Install dependencies
 $ npm i
 
-#Start's development server
+# Start's development server
 $ npm start
 ```
 
@@ -73,8 +63,7 @@ You can link your portfolio to your Github account by changing the githubUserNam
 ⭐️ Link to my GitHub profile: [JIM90mdp](https://github.com/JIM90mdp)
 
 
-<p align="center"> 🤝🏻 &nbsp;Feel free to contact me through: </p>
-<p align="center">
-<a href="https://www.linkedin.com/in/mascarenhas-developer/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Juan%20Ignacio%20Mascarenhas-blue?style=flat-square&logo=linkedin"></a>
-<a href="mailto:juanignaciomascarenhas@gmail.com"><img alt="Outlook" src="https://img.shields.io/badge/MS-Outlook-blue?style=flat-square&logo=microsoft-outlook&logoColor=white"></a>
-</p>
+### 🤝🏻 &nbsp;Connect with me through:
+
+[<img align="left" alt="LinkedIn" width="30px" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" />](https://linkedin.com/in/mascarenhas-developer/)
+[<img align="left" alt="Instagram" width="30px" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" />](https://instagram.com/nachomascarenhas/)
