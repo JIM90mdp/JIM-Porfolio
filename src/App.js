@@ -6,7 +6,6 @@ import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import clip from "../src/assets/mar-de-fondo.mp4";
 
 
 function App() {
