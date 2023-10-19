@@ -12,12 +12,18 @@ import {
 import { GiSkills } from "react-icons/gi";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
+  console.log("page from Link: ", page);
+  console.log("selectedPage from Link: ", selectedPage);
+  
+  // Guardo en una variable el nombre en minúscula
   const lowerCasePage = page.toLowerCase();
+  console.log("page from toLowerCase: ", page);
+
   return (
     <AnchorLink
       className={`${
-        selectedPage === lowerCasePage ? "text-dark-green" : ""
-      } hover:text-green transition duration-500`}
+        selectedPage === lowerCasePage ? "text-red" : ""
+      } hover:text-red transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -117,7 +123,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         </h4>
         <button
           className={`${hiddenMenu} rounded-full bg-red position: relative right-[-15px] pt-4 `}
-          onClick={() => setIsMenuToggled(!isMenuToggled)}  
+          onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
           <BsList className="h-[33px] w-[33px] text-green3" />
         </button>

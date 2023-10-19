@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <section
-      id="skills"
+      id="footer"
       className="overflow-hidden relative bg-opaque-black top-[30px] "
     >
       <LineGradient width="w-[100%]" />

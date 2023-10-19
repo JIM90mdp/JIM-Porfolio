@@ -14,6 +14,7 @@ function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   useEffect(() => {
+    console.log("selectedPage from useEffect: ", selectedPage)
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="app">
       {/* BG-VIDEO */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -36,7 +37,7 @@ function App() {
       >
         <source src={clip} type="video/mp4" />
         <source src={clip} type="video/ogg" />
-      </video>
+      </video> */}
 
       {/* NAVBAR */}
       <Navbar
